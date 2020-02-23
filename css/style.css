@@ -1,0 +1,323 @@
+/* Body font-family */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif ;
+}
+
+::selection{
+	background: rgba(78, 205, 196, 0.5);
+}
+
+/* Custom style classes */
+
+.bg-linear {
+	background-color: #52b3d9; 
+	background: linear-gradient(to right,#4ecdc4,#52b3d9);
+}
+
+.font-weight-100{
+	font-weight: 100;
+}
+
+.font-weight-300{
+	font-weight: 300;
+}
+
+.font-weight-400{
+	font-weight: 400;
+}
+
+.font-weight-500{
+	font-weight: 500;
+}
+
+.font-weight-600{
+	font-weight: 600;
+}
+
+.font-size-14{
+	font-size: 14px;
+}
+
+.text-ebony-clay{
+	color: #22313f;
+}
+
+.bg-outer-space{
+	background-color: #2e3131;
+}
+
+.text-grey{
+	color: #888888;
+}
+
+.bg-grey{
+	background-color: rgba(228, 233, 237, 0.3);
+}
+
+/* Hi container */
+
+#hi-container a{
+	background-color: white;
+	border-radius: 25px;
+}
+
+#hi-container a:hover{
+	color: white;
+	background-color: transparent;
+	border: 1px solid white;
+	transition: 0.5s;
+	border-radius: 0px;
+}
+
+#hi-container a:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+/* Extra Small devices (portrait phones, less than 576px) */
+	@media (max-width: 575.98px) { 
+	#hi-container img{
+		height: 300px;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	#hi-container img{
+	height: 300px;
+	}
+}
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	#hi-container img{
+	height: 350px;
+	}
+}
+
+/* Services Container */
+
+#services-container h1{
+	font-size: 35px;
+}
+
+#services-container h6{
+	font-size: 15px;
+}
+
+#services-container .icon{
+	height: 90px;
+}
+
+#services-container .service-title{
+	font-size: 18px;
+}
+
+#services-container p{
+	font-size: 14px;
+}
+
+/* About Me Container */
+
+#about-me-container h1{
+	font-size: 35px;
+}
+
+#about-me-container h6{
+	font-size: 15px;
+}
+
+#about-me-container p{
+	font-size: 14px;
+}
+
+#about-me-container .progress{
+	border: 1px solid #B0B0B0;
+	padding: 2px 2px 2px 2px;
+}
+
+#about-me-container .skills-title{
+	font-size: 18px;
+}
+
+#about-me-container .progress-div{
+	margin-top: 33px;
+}
+
+#about-me-container .card{
+	width: 28rem;
+}
+
+#about-me-container .card-title{
+	font-size: 18px;
+}
+
+#about-me-container .card-icon{
+	height: 18px;
+}
+
+#about-me-container a{
+	color: white;
+}
+
+#about-me-container a:focus{
+	border: none;
+	box-shadow: none;
+}
+
+#about-me-container a:hover{
+	background: white;
+	color: #22313f;
+	border: 1px solid #22313f;
+	transition: 1s;
+}
+
+/* Projects Container */
+
+#projects-container h1{
+	font-size: 35px;
+}
+
+#projects-container h6{
+	font-size: 15px;
+}
+
+#projects-container .project-title{
+	font-size: 18px;
+}
+
+#projects-container p{
+	font-size: 14px;
+}
+
+#projects-container img:hover{
+	transform: scale(0.9);
+	transition-duration: 0.7s;
+}
+
+/* Contact container */
+
+#contact-container h1{
+	font-size: 35px;
+}
+
+#contact-container h6{
+	font-size: 15px;
+}
+
+#contact-container p{
+	font-size: 14px;
+}
+
+#contact-container input{
+	height: 45px;
+	font-size: 12px;
+	background: transparent;
+}
+
+#contact-container input::placeholder{
+	font-size: 12px;
+	font-weight: 300;
+}
+
+#contact-container input:focus{
+	box-shadow: none;
+	border: 1px solid #4ecdc4;
+}
+
+#contact-container textarea{
+	background: transparent;
+	font-size: 12px;
+}
+
+#contact-container textarea::placeholder{
+	font-size: 12px;
+	font-weight: 300;
+	padding-top: 4px;
+}
+
+#contact-container textarea:focus{
+	box-shadow: none;
+	border: 1px solid #4ecdc4;
+}
+
+#contact-container button:focus{
+	box-shadow: none;
+	border: none;
+}
+
+#contact-container img{
+	height: 20px
+}
+
+/* Navbar links */
+
+nav .container ul li .nav-link{
+	color: white;
+}
+
+nav .container ul li .nav-link:hover{
+	color: #52b3d9;
+	transition: 0.5s;
+}
+
+nav .container ul li{
+	border-radius: 25px;
+}
+
+nav .container ul li:hover{
+	background-color: white;
+	transition: 0.5s;
+}
+
+/* Navbar toggle button */
+
+nav .navbar-toggler:focus{
+	box-shadow: none;
+	outline: none;
+}
+
+/* Animation */
+
+#hi-container a{
+	animation: buttonFadeIn ease-in-out 1.5s;
+}
+
+@keyframes buttonFadeIn{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes buttonFadeIn{ /* Firefox */
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes buttonFadeIn{ /* Safari and Chrome */
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes buttonFadeIn{ /* Opera */
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

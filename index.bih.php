@@ -28,22 +28,22 @@
 			  <div class="collapse navbar-collapse m-auto" id="navbarNav">
 			    <ul class="navbar-nav ml-auto">
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 active px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#home">Home</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#home">Početna</a>
 			      </li>
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#services">Service</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#services">Usluge</a>
 			      </li>
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#about">About</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#about">O meni</a>
 			      </li>
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#projects">Projects</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#projects">Projekti</a>
 			      </li>
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#contact">Contact</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#contact">Kontakt</a>
 			      </li>
 			      <li class="nav-item my-lg-0 my-xl-0 my-md-0 my-md-2 my-sm-2 my-2 px-1 d-flex align-items-center justify-content-center">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center py-0" href="index.bih.php"><img src="img/icons/bih.png"></a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center py-0" href="index.php"><img src="img/icons/uk.png"></a>
 			      </li>
 			    </ul>
 			  </div>
@@ -60,8 +60,8 @@
 			</div>
 			<div class="col-xl-6 mx-0 col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center justify-content-center">
 				<div class="text-xl-left text-lg-left text-md-left text-sm-center text-center">
-					<h1 class="font-weight-100 text-white">Hi, I'm <br class="d-xl-blocl d-lg-block d-md-block d-sm-none d-block"><span class="text-uppercase font-weight-bold">Fata Sefer</span><br>Web Developer</h1>
-					<a href="#contact" class="btn text-outer-space font-size-14 text-uppercase font-weight-600 px-5 py-2">Talk to me</a>
+					<h1 class="font-weight-100 text-white">Zdravo, ja sam <br class="d-xl-blocl d-lg-block d-md-block d-sm-none d-block"><span class="text-uppercase font-weight-bold">Fata Sefer</span><br>Web Developer</h1>
+					<a href="#contact" class="btn text-outer-space font-size-14 text-uppercase font-weight-600 px-5 py-2">Kontaktiraj me</a>
 				</div>
 			</div>
 		<div>
@@ -75,8 +75,8 @@
 <section id="services">
 	<div class="container py-5 px-xl-0 px-lg-0 px-md-0 px-sm-0">
 		<div class="row py-5">
-			<h1 class="text-center w-100 font-weight-600">Take a Look at my Services</h1>
-			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">I can use code to build whatever I want!</h6>
+			<h1 class="text-center w-100 font-weight-600">Odvojite trenutak da pogledate čime se bavim.</h1>
+			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">Pisanjem odgovarajućeg koda možete napraviti šta god želite.</h6>
 		</div>
 		<div class="row">
 			<div class="col-xl-6 col-lg-6 col-md-6">
@@ -124,8 +124,8 @@
 <section class="bg-grey" id="about">
 	<div class="container py-5 px-xl-0 px-lg-0 px-md-0 px-sm-0">
 		<div class="row py-5">
-			<h1 class="text-center w-100 font-weight-600">Here's a little something about me</h1>
-			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">Doing what you love is where happiness lives!</h6>
+			<h1 class="text-center w-100 font-weight-600">Informacije o meni</h1>
+			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">Sreća je raditi ono što voliš!</h6>
 		</div>
 		<div class="row mb-5">
 			<div class="col-xl-6 col-lg-6 col-md-12">
@@ -178,7 +178,7 @@
 				    	<img src="img/icons/mail.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">sefer.fata@gmail.com</p>
 				    </div>
 				    <div class="text-center">
-				    	<a href="#contact" class="mt-4 mb-2 btn font-size-14 text-uppercase font-weight-400 px-5 py-2 bg-linear rounded-pill hire-me-btn">Hire me</a>
+				    	<a href="#contact" class="mt-4 mb-2 btn font-size-14 text-uppercase font-weight-400 px-5 py-2 bg-linear rounded-pill hire-me-btn">Zaposli me</a>
 				    </div>
 				  </div>
 				</div>
@@ -194,16 +194,16 @@
 <section id="projects">
 	<div class="container py-5 px-xl-0 px-lg-0 px-md-0 px-sm-0">
 		<div class="row py-5">
-			<h1 class="text-center w-100 font-weight-600">My Latest Projects</h1>
-			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">Practice makes perfect!</h6>
+			<h1 class="text-center w-100 font-weight-600">Moji posljednji projekti</h1>
+			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">Vježbom do savršenstva!</h6>
 		</div>
 		<div class="row mb-5 pt-5">
 			<div class="col-xl-6 col-lg-6">
 				<img src="img/projects/hotel.png" class="img-fluid">
 			</div>
 			<div class="col-xl-6 col-lg-6 mt-5">
-				<h5 class="project-title font-weight-600">Hotel Website</h5>
-				<p class="text-grey font-weight-300 mt-3">One of the most important things for any business that is still in its infancy and looking for greener pastures is good web design. Web design can be that one thing that pushes you above or pulls you below the competition.</p>
+				<h5 class="project-title font-weight-600">Web stranica hotela</h5>
+				<p class="text-grey font-weight-300 mt-3">Jedna od najvažnijih stvari za bilo koji biznis koji je još na svom početku i u potrazi za zelenijim pašnjacima je zasigurno dobar web dizajn. To može biti ono nešto što vas podiže iznad ili vuče ispod konkurencije.</p>
 			</div>
 		</div>
 		<div class="row mb-5  pt-5">
@@ -211,8 +211,8 @@
 				<img src="img/projects/foodblog.png" class="img-fluid">
 			</div>
 			<div class="col-xl-6 col-lg-6 mt-5">
-				<h5 class="project-title font-weight-600">Foodblog</h5>
-				<p class="text-grey font-weight-300 mt-3">Good food equals good mood. And now you can share with anyone you want - because it all starts with the design and presentation of text and visual content</p>
+				<h5 class="project-title font-weight-600">Blog hrane</h5>
+				<p class="text-grey font-weight-300 mt-3">Kažu da dobra hrana popravlja raspoloženje, a sad svoje recepte možete podijeliti sa svima - jer sve počinje sa dizajnom i prezentacijom tekstualnog i vizuelnog sadržaja.</p>
 			</div>
 		</div>
 		<div class="row my-5 pt-5">
@@ -220,8 +220,8 @@
 				<img src="img/projects/online gradebook.png" class="img-fluid">
 			</div>
 			<div class="col-xl-6 col-lg-6 mt-5">
-				<h5 class="project-title font-weight-600">Online gradebook</h5>
-				<p class="text-grey font-weight-300 mt-3">This is an information system that provides records of students, their progress and grades, as well as absenteeism documentation and other data. Such an information system makes essential information easily accessible to parents and students, as well as teachers and others who need it. This project is still in making progress...</p>
+				<h5 class="project-title font-weight-600">Online školski dnevnik</h5>
+				<p class="text-grey font-weight-300 mt-3">Elektronski dnevnik  predstavlja evidenciju o učenicima, njihovom napretku i ocjenama, ali i dokumentaciju o odsustvu i druge podatke. Ovakav informacioni sistem čini bitne informacije lako dostupnim kako roditeljima i učenicima, tako i nastavnicima i ostalima koji imaju potrebu za time. Ovaj projekat je još u fazi izrade..</p>
 			</div>
 		</div>
 	</div>
@@ -234,21 +234,21 @@
 <section class="bg-grey pb-5" id="contact">
 	<div class="container py-5 px-xl-0 px-lg-0 px-md-0 px-sm-0">
 		<div class="row py-5">
-			<h1 class="text-center w-100 font-weight-600">If you have any question, fill out the form below.</h1>
-			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">I'll be glad to help.</h6>
+			<h1 class="text-center w-100 font-weight-600">Ako imate bilo kakvo pitanje, ispunite sljedeću formu.</h1>
+			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">Bit će mi drago da Vam pomognem.</h6>
 		</div>
 		<form>
 			<div class="row">
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex flex-column justify-content-between">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Name" required="">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" id="inputEmail4" placeholder="Email address" required="">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Subject*" >
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Ime" required="">
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" id="inputEmail4" placeholder="Email adresa" required="">
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Naslov*" >
 				</div>
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex d-md-block mt-xl-0 mt-lg-0 mt-md-3 mt-sm-4 mt-4">
-					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Message" required=""></textarea>
+					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Poruka" required=""></textarea>
 				</div>
 				<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6">
-					<button class="btn bg-linear text-uppercase text-white rounded-pill py-2 px-3 font-size-14 font-weight-500 d-flex align-items-center">send message<span><img src="img/icons/arrow.png" class="img-fluid"></span></button>
+					<button class="btn bg-linear text-uppercase text-white rounded-pill py-2 px-3 font-size-14 font-weight-500 d-flex align-items-center">Pošalji poruku<span><img src="img/icons/arrow.png" class="img-fluid"></span></button>
 				</div>
 			</div>
 		</form>		
@@ -263,16 +263,16 @@
 	<div class="container py-5 px-xl-0 px-lg-0 px-md-0 px-sm-0">
 		<div class="row">
 			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-				<h5 class="text-white font-weight-600">About Website</h5>
-				<p class="text-grey font-weight-300 mt-4">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Fata Sefer | All rights reserved</p>
-				<p class="text-grey font-weight-300">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a>, <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons" target="_blank">Flat Icons</a>, <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp" target="_blank">Eucalyp</a> and <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+				<h5 class="text-white font-weight-600">O stranici</h5>
+				<p class="text-grey font-weight-300 mt-4">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Fata Sefer | Sva prava pridržana</p>
+				<p class="text-grey font-weight-300">Ikonice napravili <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a>, <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons" target="_blank">Flat Icons</a>, <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp" target="_blank">Eucalyp</a> i <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank">Smashicons</a> sa <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
 			</div>
 			<div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-6 col-sm-6 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0 mt-5">
-				<h5 class="text-white font-weight-600">Contact Me Request</h5>
-				<p class="text-grey font-weight-300 mt-4">Leave your email address here and I will contact you.</p>
+				<h5 class="text-white font-weight-600">Zahtjev za kontakt</h5>
+				<p class="text-grey font-weight-300 mt-4">Ostavite svoju email adresu i ja ću Vas kontaktirati.</p>
 				<form>
 					<div class="input-group mt-2">
-					  <input type="email" class="form-control w-75 rounded-0" required="" placeholder="Your email" aria-describedby="basic-addon2">
+					  <input type="email" class="form-control w-75 rounded-0" required="" placeholder="Vaš email" aria-describedby="basic-addon2">
 					  <div class="input-group-append">
 					    <button class="btn rounded-0 bg-linear px-3" type="button"><i class="fas fa-arrow-right text-white fa-lg"></i></button>
 					  </div>
@@ -280,7 +280,7 @@
 				</form>
 			</div>
 			<div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-6  mt-xl-0 mt-lg-0 mt-md-4 mt-sm-4 mt-5 col-sm-6">
-				<h5 class="text-white font-weight-600">Follow My Work</h5>
+				<h5 class="text-white font-weight-600">Pratite moj rad</h5>
 				<p class="font-weight-300 text-grey mt-4"><span><a href="https://bitbucket.org/product/" title="Bitbucket" target="_blank"><i class="fab fa-bitbucket text-bitbucket fa-lg mr-2"></i></a></span>f_sefer</p>
 				<p class="font-weight-300 text-grey mt-3"><span><a href="https://bitbucket.org/product/" title="Github" target="_blank"><i class="fab fa-github text-white fa-lg mr-2"></i></a></span>fs98</p>
 				<p class="font-weight-300 text-grey mt-3"><span><a href="https://www.facebook.com/fata.sefer" title="Facebook" target="_blank"><i class="fab fa-facebook text-facebook fa-lg mr-2"></i></a></span>Fata Sefer</p>

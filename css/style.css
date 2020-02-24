@@ -49,6 +49,18 @@ body {
 	background-color: #2e3131;
 }
 
+.text-outer-space{
+	color: #2e3131;
+}
+
+.text-bitbucket{
+	color: #2582FC;
+}
+
+.text-facebook{
+	color: #4267B1;
+}
+
 .text-grey{
 	color: #888888;
 }
@@ -59,199 +71,281 @@ body {
 
 /* Hi container */
 
-#hi-container a{
+#home a{
 	background-color: white;
 	border-radius: 25px;
 }
 
-#hi-container a:hover{
+#home a:hover{
 	color: white;
 	background-color: transparent;
 	border: 1px solid white;
 	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
 	border-radius: 0px;
 }
 
-#hi-container a:focus{
+#home a:focus{
 	outline: none;
 	box-shadow: none;
 }
 
 /* Extra Small devices (portrait phones, less than 576px) */
 	@media (max-width: 575.98px) { 
-	#hi-container img{
+	#home img{
 		height: 300px;
 	}
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-	#hi-container img{
+	#home img{
 	height: 300px;
 	}
 }
 
 /*  Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-	#hi-container img{
+	#home img{
 	height: 350px;
 	}
 }
 
 /* Services Container */
 
-#services-container h1{
+#services h1{
 	font-size: 35px;
 }
 
-#services-container h6{
+#services h6{
 	font-size: 15px;
 }
 
-#services-container .icon{
+#services .icon{
 	height: 90px;
 }
 
-#services-container .service-title{
+#services .service-title{
 	font-size: 18px;
 }
 
-#services-container p{
+#services p{
 	font-size: 14px;
 }
 
 /* About Me Container */
 
-#about-me-container h1{
+#about h1{
 	font-size: 35px;
 }
 
-#about-me-container h6{
+#about h6{
 	font-size: 15px;
 }
 
-#about-me-container p{
+#about p{
 	font-size: 14px;
 }
 
-#about-me-container .progress{
+#about .progress{
 	border: 1px solid #B0B0B0;
 	padding: 2px 2px 2px 2px;
 }
 
-#about-me-container .skills-title{
+#about .skills-title{
 	font-size: 18px;
 }
 
-#about-me-container .progress-div{
+#about .progress-div{
 	margin-top: 33px;
 }
 
-#about-me-container .card{
+#about .card{
 	width: 28rem;
 }
 
-#about-me-container .card-title{
+#about .card-title{
 	font-size: 18px;
 }
 
-#about-me-container .card-icon{
+#about .card-icon{
 	height: 18px;
 }
 
-#about-me-container a{
+#about a{
 	color: white;
 }
 
-#about-me-container a:focus{
+#about a:focus{
 	border: none;
 	box-shadow: none;
 }
 
-#about-me-container a:hover{
+#about a:hover{
 	background: white;
 	color: #22313f;
 	border: 1px solid #22313f;
 	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
 }
 
 /* Projects Container */
 
-#projects-container h1{
+#projects h1{
 	font-size: 35px;
 }
 
-#projects-container h6{
+#projects h6{
 	font-size: 15px;
 }
 
-#projects-container .project-title{
+#projects .project-title{
 	font-size: 18px;
 }
 
-#projects-container p{
+#projects p{
 	font-size: 14px;
 }
 
-#projects-container img:hover{
+#projects img:hover{
 	transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-moz-transform: scale(0.9);
 	transition-duration: 0.7s;
 }
 
 /* Contact container */
 
-#contact-container h1{
+#contact h1{
 	font-size: 35px;
 }
 
-#contact-container h6{
+#contact h6{
 	font-size: 15px;
 }
 
-#contact-container p{
+#contact p{
 	font-size: 14px;
 }
 
-#contact-container input{
+#contact input{
 	height: 45px;
 	font-size: 12px;
 	background: transparent;
 }
 
-#contact-container input::placeholder{
+#contact input::placeholder{
 	font-size: 12px;
 	font-weight: 300;
 }
 
-#contact-container input:focus{
+#contact input:focus{
 	box-shadow: none;
 	border: 1px solid #4ecdc4;
 }
 
-#contact-container textarea{
+#contact textarea{
 	background: transparent;
 	font-size: 12px;
 }
 
-#contact-container textarea::placeholder{
+#contact textarea::placeholder{
 	font-size: 12px;
 	font-weight: 300;
 	padding-top: 4px;
 }
 
-#contact-container textarea:focus{
+#contact textarea:focus{
 	box-shadow: none;
 	border: 1px solid #4ecdc4;
 }
 
-#contact-container button:focus{
+#contact button:focus{
 	box-shadow: none;
 	border: none;
 }
 
-#contact-container img{
+#contact button img{
+	margin-left: 10px;
+}
+
+#contact button:hover img{
+	margin-left: 20px;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+}
+
+#contact img{
 	height: 20px
 }
+
+/* Footer */
+
+#footer h5{
+	font-size: 18px;
+}
+
+#footer p{
+	font-size: 14px;
+}
+
+#footer a{
+	color: #4ecdc4;
+}
+
+#footer i:hover{
+	opacity: 0.7;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;	
+}
+
+#footer a:hover{
+	text-decoration: none;
+	color: rgba(78, 205, 196, 0.6);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	-moz-transition: 0.5;
+}
+
+#footer input{
+	height: 45px;
+	font-size: 14px;
+	background: transparent;
+	color: #888888;
+	font-weight: 300;
+	width: 100px;
+}
+
+#footer input::placeholder{
+	font-size: 14px;
+	font-weight: 300;
+}
+
+#footer input:focus{
+	box-shadow: none;
+	border: 1px solid #4ecdc4;
+}
+
+#footer button{
+	color: #888888;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+#footer button:focus{
+	box-shadow: none;
+	border: none;
+}
+
 
 /* Navbar links */
 
@@ -262,6 +356,9 @@ nav .container ul li .nav-link{
 nav .container ul li .nav-link:hover{
 	color: #52b3d9;
 	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
 }
 
 nav .container ul li{
@@ -271,6 +368,9 @@ nav .container ul li{
 nav .container ul li:hover{
 	background-color: white;
 	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
 }
 
 /* Navbar toggle button */
@@ -282,7 +382,7 @@ nav .navbar-toggler:focus{
 
 /* Animation */
 
-#hi-container a{
+#home a{
 	animation: buttonFadeIn ease-in-out 1.5s;
 }
 

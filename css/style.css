@@ -421,3 +421,16 @@ nav .navbar-toggler:focus{
 		opacity: 1;
 	}
 }
+
+#back-to-top-btn{
+	position: fixed; 
+	bottom: 30px; 
+	right: 30px; 
+	z-index: 99;
+	display: none;
+}
+
+#back-to-top-btn:focus{
+	outline: none;
+	box-shadow: none;
+}

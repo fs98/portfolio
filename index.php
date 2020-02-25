@@ -17,6 +17,17 @@
 
 <!-- [Navbar] -->
 
+<?php
+
+	$servername="localhost";
+	$user="root";
+	$password="";
+	$db_name="personalwebsite";
+
+	$conn = mysqli_connect($servername, $user, $password, $db_name);
+
+?>
+
 	<nav class="navbar navbar-expand-lg sticky-top bg-linear">
 		<div class="container px-0">
 			  <a class="navbar-brand" href="index.php">
@@ -48,7 +59,11 @@
 			    </ul>
 			  </div>
 		</div>
-	</nav>
+	</nav>	
+
+<!-- Back to top button -->
+
+	<a class="btn bg-linear rounded-pill text-white" href="#home" id="back-to-top-btn"><img src="img/icons/arrow-up.png" class="img-fluid"></a>
 
 <!-- Hi Container -->
 
@@ -87,7 +102,7 @@
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat.</p>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4">
 				<img src="img/icons/programming.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Front-end development</h5>
 				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -105,7 +120,7 @@
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat.</p>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4">
 				<img src="img/icons/computer.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Database Management</h5>
 				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -237,21 +252,54 @@
 			<h1 class="text-center w-100 font-weight-600">If you have any question, fill out the form below.</h1>
 			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">I'll be glad to help.</h6>
 		</div>
-		<form>
+		<form method="post">
 			<div class="row">
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex flex-column justify-content-between">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Name" required="">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" id="inputEmail4" placeholder="Email address" required="">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Subject*" >
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Name" required="" name="visitorName">
+				  <input type="email" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" id="inputEmail4" placeholder="Email address" required="" name="visitorEmail">
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Subject*" name="messageSubject">
 				</div>
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex d-md-block mt-xl-0 mt-lg-0 mt-md-3 mt-sm-4 mt-4">
-					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Message" required=""></textarea>
+					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Message" required="" name="messageContent"></textarea>
 				</div>
 				<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6">
-					<button class="btn bg-linear text-uppercase text-white rounded-pill py-2 px-3 font-size-14 font-weight-500 d-flex align-items-center">send message<span><img src="img/icons/arrow.png" class="img-fluid"></span></button>
+					<button class="btn bg-linear text-uppercase text-white rounded-pill py-2 px-3 font-size-14 font-weight-500 d-flex align-items-center" name="sendMessage">send message<span><img src="img/icons/arrow.png" class="img-fluid"></span></button>
 				</div>
 			</div>
-		</form>		
+		</form>	
+		<?php 
+
+		if (isset($_POST['sendMessage'])) {
+			$visitorName=$_POST['visitorName'];
+			$visitorEmail=$_POST['visitorEmail'];
+			$messageSubject=$_POST['messageSubject'];
+			$messageContent=$_POST['messageContent'];
+
+			$messageSent=mysqli_query($conn, "INSERT INTO visitormessages (VisitorName,VisitorEmailAddress,MessageSubject,messageContent) values ('$visitorName','$visitorEmail','$messageSubject','$messageContent')");
+
+			if ($messageSent) {
+			?>
+				<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
+					 Your message is sent.
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						  <span aria-hidden="true"><i class="fas fa-times text-outer-space"></i></span>
+						</button>
+				</div>
+			<?php
+			}
+			else {
+			?>
+				<div class="alert alert-danger fade show font-size-14 font-weight-400 mt-3 text-outer-space rounded-0 border-0" role="alert">
+					 Error. Please try later.
+					 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					   <span aria-hidden="true">&times;</span>
+						</button>
+				</div>
+			<?php
+			}
+		}
+
+		?>	
 	</div>
 </section>
 
@@ -270,14 +318,46 @@
 			<div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-6 col-sm-6 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0 mt-5">
 				<h5 class="text-white font-weight-600">Contact Me Request</h5>
 				<p class="text-grey font-weight-300 mt-4">Leave your email address here and I will contact you.</p>
-				<form>
+				<form method="post">
 					<div class="input-group mt-2">
-					  <input type="email" class="form-control w-75 rounded-0" required="" placeholder="Your email" aria-describedby="basic-addon2">
+					  <input type="email" name="VisitorEmail" class="form-control w-75 rounded-0" required="" placeholder="Your email" aria-describedby="basic-addon2">
 					  <div class="input-group-append">
-					    <button class="btn rounded-0 bg-linear px-3" type="button"><i class="fas fa-arrow-right text-white fa-lg"></i></button>
+					    <button class="btn rounded-0 bg-linear px-3" type="submit" name="ContactRequestSubmitted"><i class="fas fa-arrow-right text-white fa-lg"></i></button>
 					  </div>
 					</div>
 				</form>
+				<?php 
+
+				if (isset($_POST['ContactRequestSubmitted'])) {
+					$visitorEmail=$_POST['VisitorEmail'];
+
+					$visitorEmailSubmitted=mysqli_query($conn, "insert into contactmerequest (VisitorEmailAddress) values ('$visitorEmail')");
+
+					if ($visitorEmailSubmitted) {
+						?>
+						<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
+						  Your email is saved and I will contact you soon.
+						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						    <span aria-hidden="true"><i class="fas fa-times text-outer-space"></i></span>
+						  </button>
+						</div>
+						<?php
+					}
+					else {
+						?>
+						<div class="alert alert-danger fade show font-size-14 font-weight-400 mt-3 text-outer-space rounded-0 border-0" role="alert">
+						  Error. Please try later.
+						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						    <span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<?php
+					}				
+
+				}
+
+				
+				?>
 			</div>
 			<div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-6  mt-xl-0 mt-lg-0 mt-md-4 mt-sm-4 mt-5 col-sm-6">
 				<h5 class="text-white font-weight-600">Follow My Work</h5>
@@ -296,6 +376,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -321,6 +402,21 @@ $(document).ready(function(){
     } // End if
   });
 });
+</script>
+<script type="text/javascript">
+//Get the button
+var mybutton = document.getElementById("back-to-top-btn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 </script>
 
 <!-- [End of Scripts] -->

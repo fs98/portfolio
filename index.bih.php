@@ -12,14 +12,26 @@
 	
 
 	<title>Hi, I'm Fata.</title>
+
 </head>
 <body>
+
+	<?php 
+
+				$servername="localhost";
+				$user="root";
+				$password="";
+				$db_name="personalwebsite";
+
+				$conn = mysqli_connect($servername, $user, $password, $db_name);
+
+	?>			
 
 <!-- [Navbar] -->
 
 	<nav class="navbar navbar-expand-lg sticky-top bg-linear">
 		<div class="container px-0">
-			  <a class="navbar-brand" href="index.php">
+			  <a class="navbar-brand" href="index.bih.php">
 		    	<img src="img/logo.png" height="30" alt="" class="d-inline-block align-top"> <span class="font-weight-500 text-white">fs</span>
 		  	</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,6 +61,10 @@
 			  </div>
 		</div>
 	</nav>
+
+<!-- Back to top button -->
+
+	<a class="btn bg-linear rounded-pill text-white" href="#home" id="back-to-top-btn"><img src="img/icons/arrow-up.png" class="img-fluid"></a>	
 
 <!-- Hi Container -->
 
@@ -237,21 +253,54 @@
 			<h1 class="text-center w-100 font-weight-600">Ako imate bilo kakvo pitanje, ispunite sljedeću formu.</h1>
 			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">Bit će mi drago da Vam pomognem.</h6>
 		</div>
-		<form>
+		<form method="post">
 			<div class="row">
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex flex-column justify-content-between">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Ime" required="">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" id="inputEmail4" placeholder="Email adresa" required="">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Naslov*" >
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Ime" required="" name="visitorName">
+				  <input type="email" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" id="inputEmail4" placeholder="Email adresa" required="" name="visitorEmail">
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Naslov*" name="messageSubject">
 				</div>
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex d-md-block mt-xl-0 mt-lg-0 mt-md-3 mt-sm-4 mt-4">
-					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Poruka" required=""></textarea>
+					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Poruka" required="" name="messageContent"></textarea>
 				</div>
 				<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6">
-					<button class="btn bg-linear text-uppercase text-white rounded-pill py-2 px-3 font-size-14 font-weight-500 d-flex align-items-center">Pošalji poruku<span><img src="img/icons/arrow.png" class="img-fluid"></span></button>
+					<button class="btn bg-linear text-uppercase text-white rounded-pill py-2 px-3 font-size-14 font-weight-500 d-flex align-items-center" type="submit" name="sendMessage">Pošalji poruku<span><img src="img/icons/arrow.png" class="img-fluid"></span></button>
 				</div>
 			</div>
 		</form>		
+		<?php 
+
+		if (isset($_POST['sendMessage'])) {
+			$visitorName=$_POST['visitorName'];
+			$visitorEmail=$_POST['visitorEmail'];
+			$messageSubject=$_POST['messageSubject'];
+			$messageContent=$_POST['messageContent'];
+
+			$messageSent=mysqli_query($conn, "INSERT INTO visitormessages (VisitorName,VisitorEmailAddress,MessageSubject,messageContent) values ('$visitorName','$visitorEmail','$messageSubject','$messageContent')");
+
+			if ($messageSent) {
+			?>
+				<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
+					 Vaša poruka je poslana.
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						  <span aria-hidden="true"><i class="fas fa-times text-outer-space"></i></span>
+						</button>
+				</div>
+			<?php
+			}
+			else {
+			?>
+				<div class="alert alert-danger fade show font-size-14 font-weight-400 mt-3 text-outer-space rounded-0 border-0" role="alert">
+					 Došlo je do greške. Molim, pokušajte kasnije.
+					 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					   <span aria-hidden="true">&times;</span>
+						</button>
+				</div>
+			<?php
+			}
+		}
+
+		?>
 	</div>
 </section>
 
@@ -265,19 +314,49 @@
 			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
 				<h5 class="text-white font-weight-600">O stranici</h5>
 				<p class="text-grey font-weight-300 mt-4">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Fata Sefer | Sva prava pridržana</p>
-				<p class="text-grey font-weight-300">Ikonice napravili <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a>, <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons" target="_blank">Flat Icons</a>, <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp" target="_blank">Eucalyp</a> i <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank">Smashicons</a> sa <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+				<p class="text-grey font-weight-300">Autori ikonica <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a>, <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons" target="_blank">Flat Icons</a>, <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp" target="_blank">Eucalyp</a> i <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank">Smashicons</a> sa <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
 			</div>
 			<div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-6 col-sm-6 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0 mt-5">
 				<h5 class="text-white font-weight-600">Zahtjev za kontakt</h5>
 				<p class="text-grey font-weight-300 mt-4">Ostavite svoju email adresu i ja ću Vas kontaktirati.</p>
-				<form>
+				<form method="post">
 					<div class="input-group mt-2">
-					  <input type="email" class="form-control w-75 rounded-0" required="" placeholder="Vaš email" aria-describedby="basic-addon2">
+					  <input type="email" name="VisitorEmail" class="form-control w-75 rounded-0" required="" placeholder="Vaš email" aria-describedby="basic-addon2">
 					  <div class="input-group-append">
-					    <button class="btn rounded-0 bg-linear px-3" type="button"><i class="fas fa-arrow-right text-white fa-lg"></i></button>
+					    <button class="btn rounded-0 bg-linear px-3" name="ContactRequestSubmitted" type="submit"><i class="fas fa-arrow-right text-white fa-lg"></i></button>
 					  </div>
 					</div>
 				</form>
+				<?php 
+
+				if (isset($_POST['ContactRequestSubmitted'])) {
+					$visitorEmail=$_POST['VisitorEmail'];
+
+					$visitorEmailSubmitted=mysqli_query($conn, "insert into contactmerequest (VisitorEmailAddress) values ('$visitorEmail')");
+
+					if ($visitorEmailSubmitted) {
+						?>
+						<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
+						  Vaš email je sačuvan. Uskoro ću Vas kontaktirati.
+						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						    <span aria-hidden="true"><i class="fas fa-times text-outer-space"></i></span>
+						  </button>
+						</div>
+						<?php
+					}
+					else {
+						?>
+						<div class="alert alert-danger fade show font-size-14 font-weight-400 mt-3 text-outer-space rounded-0 border-0" role="alert">
+						  Došlo je do greške. Molim, pokušajte kasnije.
+						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						    <span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<?php
+					}
+				}				
+
+				?>
 			</div>
 			<div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-6  mt-xl-0 mt-lg-0 mt-md-4 mt-sm-4 mt-5 col-sm-6">
 				<h5 class="text-white font-weight-600">Pratite moj rad</h5>
@@ -321,6 +400,21 @@ $(document).ready(function(){
     } // End if
   });
 });
+</script>
+<script type="text/javascript">
+//Get the button
+var mybutton = document.getElementById("back-to-top-btn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 </script>
 
 <!-- [End of Scripts] -->

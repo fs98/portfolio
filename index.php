@@ -94,39 +94,28 @@
 			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">I can use code to build whatever I want!</h6>
 		</div>
 		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 text-xl-left text-lg-left text-md-left text-sm-center text-center">
 				<img src="img/icons/monitor.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Web Design</h5>
-				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p class="mt-4 font-weight-300 text-grey">Website design is important but not just for aesthetic reasons. It doesn't matter how good it looks or how effective it can be if it's hard to use. With a lot of competition on the internet, users simply do not have the patience to cope with complicated pages..</p>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4">
+			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4 text-xl-left text-lg-left text-md-left text-sm-center text-center">
 				<img src="img/icons/programming.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Front-end development</h5>
-				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p class="mt-4 font-weight-300 text-grey">It is important to note that while Front-end deals with the visible and interactive side of a website, it does not mean that it deals with web design. Frontend developers are designing the layout and not designing the website.</p>
 			</div>
 		</div>
 		<div class="row mt-4">
-			<div class="col-xl-6 col-lg-6 col-md-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 text-xl-left text-lg-left text-md-left text-sm-center text-center">
 				<img src="img/icons/backend.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Back-end development</h5>
-				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p class="mt-4 font-weight-300 text-grey">
+Behind the scene: backend is part of a website that is not visible to site visitors. It is responsible for data managment and ensuring that everything on the user side works.</p>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4">
+			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4 text-xl-left text-lg-left text-md-left text-sm-center text-center">
 				<img src="img/icons/computer.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Database Management</h5>
-				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p class="mt-4 font-weight-300 text-grey">Database Management allows organizing, storing and retrieving data.</p>
 			</div>
 		</div>
 	</div>
@@ -144,37 +133,34 @@
 		</div>
 		<div class="row mb-5">
 			<div class="col-xl-6 col-lg-6 col-md-12">
-				<p class="font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p class="font-weight-300 text-grey">I am 21 years old and currently student of a third year of Software Engineering at International University of Travnik.</p>
 				<h5 class="font-weight-600 skills-title mt-4 mb-5">My Skills</h5>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">HTML 80%</p>
+					<p class="mb-2 text-grey font-weight-400">HTML<span class="float-right">Very good</span></p>
 					<div class="progress bg-white rounded-pill">
 					  <div class="progress-bar bg-linear rounded-pill" style="width: 80%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">CSS 75%</p>
+					<p class="mb-2 text-grey font-weight-400">CSS<span class="float-right">Very good</span></p>
 					<div class="progress bg-white rounded-pill">
 					  <div class="progress-bar bg-linear rounded-pill" style="width: 75%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">Bootstrap 85%</p>
+					<p class="mb-2 text-grey font-weight-400">Bootstrap<span class="float-right">Excellent</span></p>
 					<div class="progress bg-white rounded-pill">
 					  <div class="progress-bar bg-linear rounded-pill" style="width: 85%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">PHP 65%</p>
+					<p class="mb-2 text-grey font-weight-400">PHP<span class="float-right">Good</span></p>
 					<div class="progress bg-white rounded-pill">
-					  <div class="progress-bar bg-linear rounded-pill" style="width: 65%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+					  <div class="progress-bar bg-linear rounded-pill" style="width: 70%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">MySql 65%</p>
+					<p class="mb-2 text-grey font-weight-400">MySql<span class="float-right">Good</span></p>
 					<div class="progress bg-white rounded-pill">
 					  <div class="progress-bar bg-linear rounded-pill" style="width: 65%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
@@ -190,7 +176,7 @@
 				    	<img src="img/icons/telephone.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">(+387) 62 808 723</p>
 				    </div>
 				    <div class="text-center mt-3">
-				    	<img src="img/icons/mail.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">sefer.fata@gmail.com</p>
+				    	<img src="img/icons/mail.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">info@fatasefer.com</p>
 				    </div>
 				    <div class="text-center">
 				    	<a href="#contact" class="mt-4 mb-2 btn font-size-14 text-uppercase font-weight-400 px-5 py-2 bg-linear rounded-pill hire-me-btn">Hire me</a>
@@ -257,7 +243,7 @@
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex flex-column justify-content-between">
 				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Name" required="" name="visitorName">
 				  <input type="email" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" id="inputEmail4" placeholder="Email address" required="" name="visitorEmail">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Subject*" name="messageSubject">
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Subject (optional)" name="messageSubject">
 				</div>
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex d-md-block mt-xl-0 mt-lg-0 mt-md-3 mt-sm-4 mt-4">
 					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Message" required="" name="messageContent"></textarea>
@@ -277,15 +263,43 @@
 
 			$messageSent=mysqli_query($conn, "INSERT INTO visitormessages (VisitorName,VisitorEmailAddress,MessageSubject,messageContent) values ('$visitorName','$visitorEmail','$messageSubject','$messageContent')");
 
+            /* Mail to me */
+            $subject_to_me="New question from $visitorName";
+            $message_to_me="You have new question from $visitorName.
+            
+Email: $visitorEmail
+Subject: $messageSubject
+Message: $messageContent";
+            
+            /* $headers2 .= 'From: ' . 'Personal Website' . "\r\n"; */
+            
+            /* Mail to sender */
+            
+            $message_to_sender="Hello $visitorName,
+            
+Your message is received. I will get to you as soon as possible. If you do not receive my email in next ten days, please check your spam folder.
+
+This is an automated response, please do not answer this email.
+
+Greetings,
+
+Fata Sefer
++387 62 808 723
+Travnik, 72270
+www.fatasefer.com";
+            $header_to_sender .='From: ' . 'Fata Sefer' . ' ' . 'info@fatasefer.com' . "\r\n";
+
 			if ($messageSent) {
 			?>
 				<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
-					 Your message is sent.
+					 Thank you. You will receive a confirmation email soon.
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						  <span aria-hidden="true"><i class="fas fa-times text-outer-space"></i></span>
 						</button>
 				</div>
 			<?php
+			    mail("info@fatasefer.com",$subject_to_me,$message_to_me);
+			    mail($visitorEmail,"Your message is received",$message_to_sender,$header_to_sender);
 			}
 			else {
 			?>
@@ -332,16 +346,41 @@
 					$visitorEmail=$_POST['VisitorEmail'];
 
 					$visitorEmailSubmitted=mysqli_query($conn, "insert into contactmerequest (VisitorEmailAddress) values ('$visitorEmail')");
+					
+					/* Mail to me */
+					$mail_to='info@fatasefer.com';
+					$subject='New Email request';
+					$message="You have new email request from $visitorEmail.";
+					/* $headers1 .= 'From: ' . 'Personal Website' . "\r\n"; */
+					
+					/* Mail to visitor */
+					$subject_visitorMail='Your email is received.';
+					$message_for_visitor="Hello there,
+					
+Your email is received. I will get back to you as soon as possible. If you do not receive my email in next ten days, please check your spam folder.
+
+This is an automated response. Please do not answer this email.
+					
+Greetings,
+					
+Fata Sefer
++387 62 808 723
+Travnik, 72270
+www.fatasefer.com";
+					$headers .= 'From: ' . 'Fata Sefer' . ' ' . 'info@fatasefer.com' . "\r\n";
+
 
 					if ($visitorEmailSubmitted) {
 						?>
 						<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
-						  Your email is saved and I will contact you soon.
+						  Thank you. You will receive a confirmation email soon.
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						    <span aria-hidden="true"><i class="fas fa-times text-outer-space"></i></span>
 						  </button>
 						</div>
 						<?php
+						mail($mail_to,$subject,$message);
+						mail($visitorEmail,$subject_visitorMail,$message_for_visitor,$headers);
 					}
 					else {
 						?>

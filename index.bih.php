@@ -18,10 +18,10 @@
 
 	<?php 
 
-				$servername="localhost";
-				$user="root";
-				$password="";
-				$db_name="personalwebsite";
+	$servername="localhost";
+	$user="root";
+	$password="";
+	$db_name="personalwebsite";
 
 				$conn = mysqli_connect($servername, $user, $password, $db_name);
 
@@ -95,39 +95,27 @@
 			<h6 class="text-center w-100 font-weight-300 text-grey mt-1">Pisanjem odgovarajućeg koda možete napraviti šta god želite.</h6>
 		</div>
 		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 text-xl-left text-lg-left text-md-left text-sm-center text-center">
 				<img src="img/icons/monitor.png" class="img-fluid icon">
-				<h5 class="mt-4 service-title font-weight-600">Web Design</h5>
-				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<h5 class="mt-4 service-title font-weight-600">Web Dizajn</h5>
+				<p class="mt-4 font-weight-300 text-grey">Odgovarajući dizajn je jako bitan i to ne samo iz estetskih razloga. Ponekad nije bitno kako stranica izgleda ili koliko je funkcionalna nego koliko je jednostavna za korištenje. Sa tako velikom konkurencijom, korisnici jednostavno ne žele da troše vrijeme na komplikovane stvari koje uzimaju previše vremena.</p>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4 text-xl-left text-lg-left text-md-left text-sm-center text-center">
 				<img src="img/icons/programming.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Front-end development</h5>
-				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p class="mt-4 font-weight-300 text-grey">Vrlo je važno napomenuti da se front-end development bavi pravljenjem onog dijela stranice koji je vidljiv korisnicima, ali to ne znači da se bavi i web dizajnom.</p>
 			</div>
 		</div>
 		<div class="row mt-4">
-			<div class="col-xl-6 col-lg-6 col-md-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 text-xl-left text-lg-left text-md-left text-sm-center text-center">
 				<img src="img/icons/backend.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Back-end development</h5>
-				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p class="mt-4 font-weight-300 text-grey">Iza kulisa: back-end je onaj dio kojeg korisnici ne mogu vidjeti, a služi za pohranu i organizaciju podataka čineći tako sigurnim da će na strani korisnika sve dobro funkcionisati.</p>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4 text-xl-left text-lg-left text-md-left text-sm-center text-center">
 				<img src="img/icons/computer.png" class="img-fluid icon">
-				<h5 class="mt-4 service-title font-weight-600">Database Management</h5>
-				<p class="mt-4 font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<h5 class="mt-4 service-title font-weight-600">Upravljanje bazom podataka</h5>
+				<p class="mt-4 font-weight-300 text-grey">Upravljanje bazom podataka omogućava organizaciju, pohranu i čuvanje podataka.</p>
 			</div>
 		</div>
 	</div>
@@ -145,37 +133,34 @@
 		</div>
 		<div class="row mb-5">
 			<div class="col-xl-6 col-lg-6 col-md-12">
-				<p class="font-weight-300 text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p class="font-weight-300 text-grey">Imam 21 godinu, a trenutno sam student treće godine Softverskog programiranja na Internacionalnom univerzitetu Travnik.</p>
 				<h5 class="font-weight-600 skills-title mt-4 mb-5">My Skills</h5>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">HTML 80%</p>
+					<p class="mb-2 text-grey font-weight-400">HTML<span class="float-right">Vrlo dobro</span></p>
 					<div class="progress bg-white rounded-pill">
 					  <div class="progress-bar bg-linear rounded-pill" style="width: 80%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">CSS 75%</p>
+					<p class="mb-2 text-grey font-weight-400">CSS<span class="float-right">Vrlo dobro</span></p>
 					<div class="progress bg-white rounded-pill">
 					  <div class="progress-bar bg-linear rounded-pill" style="width: 75%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">Bootstrap 85%</p>
+					<p class="mb-2 text-grey font-weight-400">Bootstrap<span class="float-right">Odlično</span></p>
 					<div class="progress bg-white rounded-pill">
 					  <div class="progress-bar bg-linear rounded-pill" style="width: 85%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">PHP 65%</p>
+					<p class="mb-2 text-grey font-weight-400">PHP<span class="float-right">Dobro</span></p>
 					<div class="progress bg-white rounded-pill">
-					  <div class="progress-bar bg-linear rounded-pill" style="width: 65%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+					  <div class="progress-bar bg-linear rounded-pill" style="width: 70%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<div class="progress-div">
-					<p class="mb-2 text-right text-grey font-weight-400">MySql 65%</p>
+					<p class="mb-2 text-grey font-weight-400">MySql<span class="float-right">Dobro</span></p>
 					<div class="progress bg-white rounded-pill">
 					  <div class="progress-bar bg-linear rounded-pill" style="width: 65%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
@@ -191,7 +176,7 @@
 				    	<img src="img/icons/telephone.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">(+387) 62 808 723</p>
 				    </div>
 				    <div class="text-center mt-3">
-				    	<img src="img/icons/mail.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">sefer.fata@gmail.com</p>
+				    	<img src="img/icons/mail.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">info@fatasefer.com</p>
 				    </div>
 				    <div class="text-center">
 				    	<a href="#contact" class="mt-4 mb-2 btn font-size-14 text-uppercase font-weight-400 px-5 py-2 bg-linear rounded-pill hire-me-btn">Zaposli me</a>
@@ -227,7 +212,7 @@
 				<img src="img/projects/foodblog.png" class="img-fluid">
 			</div>
 			<div class="col-xl-6 col-lg-6 mt-5">
-				<h5 class="project-title font-weight-600">Blog hrane</h5>
+				<h5 class="project-title font-weight-600">Blog za ljubitelje kuhanja</h5>
 				<p class="text-grey font-weight-300 mt-3">Kažu da dobra hrana popravlja raspoloženje, a sad svoje recepte možete podijeliti sa svima - jer sve počinje sa dizajnom i prezentacijom tekstualnog i vizuelnog sadržaja.</p>
 			</div>
 		</div>
@@ -258,7 +243,7 @@
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex flex-column justify-content-between">
 				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Ime" required="" name="visitorName">
 				  <input type="email" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" id="inputEmail4" placeholder="Email adresa" required="" name="visitorEmail">
-				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Naslov*" name="messageSubject">
+				  <input type="text" class="form-control rounded-0 pl-3 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3" placeholder="Naslov (neobavezno)" name="messageSubject">
 				</div>
 				<div class="col-xl-6 col-lg-6 col-md-12 form-group d-flex d-md-block mt-xl-0 mt-lg-0 mt-md-3 mt-sm-4 mt-4">
 					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Poruka" required="" name="messageContent"></textarea>
@@ -277,16 +262,48 @@
 			$messageContent=$_POST['messageContent'];
 
 			$messageSent=mysqli_query($conn, "INSERT INTO visitormessages (VisitorName,VisitorEmailAddress,MessageSubject,messageContent) values ('$visitorName','$visitorEmail','$messageSubject','$messageContent')");
+            
+            /* Mail to me */
+            $sender_message_subject="New question from $visitorName";
+            $sender_message="You have new question from $visitorName. 
+
+Details
+
+Email: $visitorEmail
+Subject: $messageSubject
+Message: $messageContent";
+
+            /* $headers1 .= 'From: ' . 'Personal Website' . "\r\n"; */
+
+            /* Mail to sender */
+            
+            $message_to_sender="Zdravo $visitorName,
+            
+Vaša poruka je spremljena, a odgovor ćete dobiti uskoro. Ukoliko odgovor ne stigne u roku od narednih deset dana - provjerite spam folder.
+
+Ovo je automatski odgovor, stoga Vas molim da ne odgovarate na ovaj mejl.
+
+Srdačan pozdrav,
+
+Fata Sefer
++387 62 808 723
+Travnik, 72270
+www.fatasefer.com";
+            
+            $header_to_sender .='From: ' . 'Fata Sefer' . ' ' . 'info@fatasefer.com' . "\r\n";
 
 			if ($messageSent) {
+
 			?>
 				<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
-					 Vaša poruka je poslana.
+					 Vaša poruka je poslana. Uskoro ćete primiti mejl kojim se to potvrđuje.
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						  <span aria-hidden="true"><i class="fas fa-times text-outer-space"></i></span>
 						</button>
 				</div>
 			<?php
+			mail("info@fatasefer.com",$sender_message_subject,$sender_message);
+			mail($visitorEmail,"Vaša poruka je primljena",$message_to_sender,$header_to_sender);
 			}
 			else {
 			?>
@@ -333,16 +350,41 @@
 					$visitorEmail=$_POST['VisitorEmail'];
 
 					$visitorEmailSubmitted=mysqli_query($conn, "insert into contactmerequest (VisitorEmailAddress) values ('$visitorEmail')");
+					
+					/* Mail to me */
+					
+					$email_request_subject="New email request";
+					$email_request_message="You have new email request from $visitorEmail.";
+					/* $headers2 .= 'From: ' . 'Personal Website' . "\r\n"; */
+					
+					/* Mail to visitor */
+					
+					$email_request_message_to_visitor="Zdravo,
+					
+Vaš mejl je primljen i sačuvan. Uskoro ću Vas kontaktirati. Ukoliko u narednih deset dana ne budete kontaktirani, provjerite spam folder.
+
+Ovo je automatski odgovor, stoga Vas molim da na njega ne odgovarate.
+
+Srdačan pozdrav, 
+
+Fata Sefer
++387 62 808 723
+Travnik, 72270
+www.fatasefer.com";
+                    
+                    $email_request_header_to_sender .='From: ' . 'Fata Sefer' . ' ' . 'info@fatasefer.com' . "\r\n";
 
 					if ($visitorEmailSubmitted) {
 						?>
 						<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
-						  Vaš email je sačuvan. Uskoro ću Vas kontaktirati.
+						  Vaša mejl adresa je sačuvana. Uskoro ćete dobiti mejl kojim se to potvrđuje.
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						    <span aria-hidden="true"><i class="fas fa-times text-outer-space"></i></span>
 						  </button>
 						</div>
 						<?php
+						mail('info@fatasefer.com',$email_request_subject,$email_request_message);
+						mail($visitorEmail,"Vaš mejl je sačuvan.",$email_request_message_to_visitor,$email_request_header_to_sender);
 					}
 					else {
 						?>

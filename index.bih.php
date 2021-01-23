@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<?php 
+<!-- 	<?php 
 
 	$servername="localhost";
 	$user="root";
@@ -25,7 +25,7 @@
 
 				$conn = mysqli_connect($servername, $user, $password, $db_name);
 
-	?>			
+	?> -->			
 
 <!-- [Navbar] -->
 

@@ -17,7 +17,7 @@
 
 <!-- [Navbar] -->
 
-<?php
+<!-- <?php
 
 	$servername="localhost";
 	$user="root";
@@ -26,7 +26,7 @@
 
 	$conn = mysqli_connect($servername, $user, $password, $db_name);
 
-?>
+?> -->
 
 	<nav class="navbar navbar-expand-lg sticky-top bg-linear">
 		<div class="container px-0">

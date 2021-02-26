@@ -5,14 +5,12 @@
 	<!-- [Meta tags] -->
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/ico" href="img/logo.png"/>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="icon" type="image/ico" href="assets/img/logo.png"/>
+	<link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="assets/fontawesome/css/all.css">
 
-	<title>Hi, I'm Fata.</title>
-
+	<title>Hi, I'm Fata Sefer.</title>
 </head>
 <body>
 
@@ -21,7 +19,7 @@
 	$servername="localhost";
 	$user="root";
 	$password="";
-	$db_name="personalwebsite";
+	$db_name="portfolio";
 
 				$conn = mysqli_connect($servername, $user, $password, $db_name);
 
@@ -31,31 +29,31 @@
 
 	<nav class="navbar navbar-expand-lg sticky-top bg-linear">
 		<div class="container px-0">
-			  <a class="navbar-brand" href="index.bih.php">
-		    	<img src="img/logo.png" height="30" alt="" class="d-inline-block align-top"> <span class="font-weight-500 text-white">fs</span>
+			  <a class="navbar-brand" href="index.php">
+		    	<img src="assets/img/logo.png" height="30" alt="" class="d-inline-block align-top"> <span class="font-weight-500 text-white">fs</span>
 		  	</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon d-flex justify-content-center align-items-center px-0 mx-0"><img src="img/icons/toggler.png"></span>
+			    <span class="navbar-toggler-icon d-flex justify-content-center align-items-center px-0 mx-0"><img src="assets/img/icons/toggler.png"></span>
 			  </button>
 			  <div class="collapse navbar-collapse m-auto" id="navbarNav">
 			    <ul class="navbar-nav ml-auto">
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 active px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#home">Početna</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="../../index.php#home">Početna</a>
 			      </li>
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#services">Usluge</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="../../index.php#services">Usluge</a>
 			      </li>
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#about">O meni</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="../../index.php#about">O meni</a>
 			      </li>
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 px-1">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#projects">Projekti</a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="../../index.php#projects">Projekti</a>
 			      </li>
 			      <li class="nav-item mr-xl-3 mr-lg-3 mt-lg-0 mt-xl-0 mt-md-0 mt-md-2 mt-sm-2 mt-2 px-1">
 			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center" href="#contact">Kontakt</a>
 			      </li>
 			      <li class="nav-item my-lg-0 my-xl-0 my-md-0 my-md-2 my-sm-2 my-2 px-1 d-flex align-items-center justify-content-center">
-			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center py-0" href="index.php"><img src="img/icons/uk.png"></a>
+			        <a class="nav-link text-uppercase font-weight-600 font-size-14 text-xl-left text-lg-left text-md-center text-sm-center text-center py-0" href="index.php"><img src="assets/img/icons/uk.png"></a>
 			      </li>
 			    </ul>
 			  </div>
@@ -64,7 +62,7 @@
 
 <!-- Back to top button -->
 
-	<a class="btn bg-linear rounded-pill text-white" href="#home" id="back-to-top-btn"><img src="img/icons/arrow-up.png" class="img-fluid"></a>	
+	<a class="btn bg-linear rounded-pill text-white" href="#home" id="back-to-top-btn"><img src="assets/img/icons/arrow-up.png" class="img-fluid"></a>	
 
 <!-- Hi Container -->
 
@@ -72,7 +70,7 @@
 	<div class="container pt-xl-5 pb-xl-0 pt-lg-5 pb-lg-0 pt-md-5 pb-md-0 py-sm-4 py-3">
 		<div class="row py-xl-0 py-lg-0 py-md-0 py-sm-3 py-3">
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-xl-end align-items-lg-end align-items-md-center justify-content-md-center justify-content-sm-center justify-content-center mb-0">
-					<img src="img/fata.png" class="img-fluid mb-xl-0 mb-lg-0 mb-md-0 mb-sm-5 mb-5">
+					<img src="assets/img/fata.png" class="img-fluid mb-xl-0 mb-lg-0 mb-md-0 mb-sm-5 mb-5">
 			</div>
 			<div class="col-xl-6 mx-0 col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center justify-content-center">
 				<div class="text-xl-left text-lg-left text-md-left text-sm-center text-center">
@@ -96,24 +94,24 @@
 		</div>
 		<div class="row">
 			<div class="col-xl-6 col-lg-6 col-md-6 text-xl-left text-lg-left text-md-left text-sm-center text-center">
-				<img src="img/icons/monitor.png" class="img-fluid icon">
+				<img src="assets/img/icons/monitor.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Web Dizajn</h5>
-				<p class="mt-4 font-weight-300 text-grey">Odgovarajući dizajn je jako bitan i to ne samo iz estetskih razloga. Ponekad nije bitno kako stranica izgleda ili koliko je funkcionalna nego koliko je jednostavna za korištenje. Sa tako velikom konkurencijom, korisnici jednostavno ne žele da troše vrijeme na komplikovane stvari koje uzimaju previše vremena.</p>
+				<p class="mt-4 font-weight-300 text-grey">Širom svijeta preko 50% ukupnih internet aktivnosti obavlja se na mobilnim uređajima. S toliko mnogo ljudi koji surfuju Internetom putem svojih telefona, neophodno im je ponuditi sjajno iskustvo. Bez responzivnih web stranica, ne možete zadovoljiti većinu korisnika interneta i kao rezultat toga vjerojatno propuštate promet i potencijalne klijente.</p>
 			</div>
 			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4 text-xl-left text-lg-left text-md-left text-sm-center text-center">
-				<img src="img/icons/programming.png" class="img-fluid icon">
+				<img src="assets/img/icons/programming.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Front-end development</h5>
-				<p class="mt-4 font-weight-300 text-grey">Vrlo je važno napomenuti da se front-end development bavi pravljenjem onog dijela stranice koji je vidljiv korisnicima, ali to ne znači da se bavi i web dizajnom.</p>
+				<p class="mt-4 font-weight-300 text-grey">Odgovarajući dizajn je jako bitan i to ne samo iz estetskih razloga. Ponekad nije bitno kako stranica izgleda ili koliko je funkcionalna nego koliko je jednostavna za korištenje. Sa tako velikom konkurencijom, korisnici jednostavno ne žele da troše vrijeme na komplikovane stvari koje uzimaju previše vremena. </p>
 			</div>
 		</div>
 		<div class="row mt-4">
 			<div class="col-xl-6 col-lg-6 col-md-6 text-xl-left text-lg-left text-md-left text-sm-center text-center">
-				<img src="img/icons/backend.png" class="img-fluid icon">
+				<img src="assets/img/icons/backend.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Back-end development</h5>
 				<p class="mt-4 font-weight-300 text-grey">Iza kulisa: back-end je onaj dio kojeg korisnici ne mogu vidjeti, a služi za pohranu i organizaciju podataka čineći tako sigurnim da će na strani korisnika sve dobro funkcionisati.</p>
 			</div>
 			<div class="col-xl-6 col-lg-6 col-md-6 mt-xl-0 mx-lg-0 mt-md-0 mt-sm-4 mt-4 text-xl-left text-lg-left text-md-left text-sm-center text-center">
-				<img src="img/icons/computer.png" class="img-fluid icon">
+				<img src="assets/img/icons/computer.png" class="img-fluid icon">
 				<h5 class="mt-4 service-title font-weight-600">Upravljanje bazom podataka</h5>
 				<p class="mt-4 font-weight-300 text-grey">Upravljanje bazom podataka omogućava organizaciju, pohranu i čuvanje podataka.</p>
 			</div>
@@ -168,15 +166,15 @@
 			</div>
 			<div class="col-xl-6 col-lg-6 col-md-12 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 d-flex justify-content-xl-end justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center align-items-center">
 				<div class="card mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 border-0">
-				  <img src="img/card-img-1.jpeg" class="card-img-top rounded-0" alt="...">
+				  <img src="assets/img/card-img-1.jpeg" class="card-img-top rounded-0" alt="...">
 				  <div class="card-body border-0 rounded-0">
 				  	<h5 class="card-title font-weight-600 text-center my-0">Fata Sefer</h5>
 				    <p class="card-text text-center text-grey font-weight-300">Web Developer</p>
 				    <div class="text-center">
-				    	<img src="img/icons/telephone.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">(+387) 62 808 723</p>
+				    	<img src="assets/img/icons/telephone.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">(+387) 62 808 723</p>
 				    </div>
 				    <div class="text-center mt-3">
-				    	<img src="img/icons/mail.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">info@fatasefer.com</p>
+				    	<img src="assets/img/icons/mail.png" class="card-icon d-inline">&nbsp;<p class="d-inline text-grey font-weight-300">info@fatasefer.com</p>
 				    </div>
 				    <div class="text-center">
 				    	<a href="#contact" class="mt-4 mb-2 btn font-size-14 text-uppercase font-weight-400 px-5 py-2 bg-linear rounded-pill hire-me-btn">Zaposli me</a>
@@ -200,31 +198,55 @@
 		</div>
 		<div class="row mb-5 pt-5">
 			<div class="col-xl-6 col-lg-6">
-				<img src="img/projects/hotel.png" class="img-fluid">
+				<img src="assets/img/projects/hotel.png" class="img-fluid">
 			</div>
 			<div class="col-xl-6 col-lg-6 mt-5">
-				<h5 class="project-title font-weight-600">Web stranica hotela</h5>
+				<a class="project-title h5 font-weight-600 text-dark text-decoration-none" href="projects/hotel-website">Web stranica hotela</a>
 				<p class="text-grey font-weight-300 mt-3">Jedna od najvažnijih stvari za bilo koji biznis koji je još na svom početku i u potrazi za zelenijim pašnjacima je zasigurno dobar web dizajn. To može biti ono nešto što vas podiže iznad ili vuče ispod konkurencije.</p>
 			</div>
 		</div>
 		<div class="row mb-5  pt-5">
 			<div class="col-xl-6 col-lg-6">
-				<img src="img/projects/foodblog.png" class="img-fluid">
+				<img src="assets/img/projects/foodblog-3.png" class="img-fluid">
 			</div>
 			<div class="col-xl-6 col-lg-6 mt-5">
-				<h5 class="project-title font-weight-600">Blog za ljubitelje kuhanja</h5>
+				<a class="project-title h5 font-weight-600 text-dark text-decoration-none" href="projects/foodblog">Blog za ljubitelje kuhanja</a>
 				<p class="text-grey font-weight-300 mt-3">Kažu da dobra hrana popravlja raspoloženje, a sad svoje recepte možete podijeliti sa svima - jer sve počinje sa dizajnom i prezentacijom tekstualnog i vizuelnog sadržaja.</p>
+			</div>
+		</div>
+		<div class="row mb-5 pt-5">
+			<div class="col-xl-6 col-lg-6">
+				<img src="assets/img/projects/webshop.jpg" class="img-fluid">
+			</div>
+			<div class="col-xl-6 col-lg-6 mt-5">
+				<a class="project-title h5 font-weight-600 text-dark text-decoration-none" href="projects/web-shop">Web Shop</a>
+				<p class="text-grey font-weight-300 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. </p>
 			</div>
 		</div>
 		<div class="row my-5 pt-5">
 			<div class="col-xl-6 col-lg-6">
-				<img src="img/projects/online gradebook.png" class="img-fluid">
+				<img src="assets/img/projects/online-gradebook.jpg" class="img-fluid">
 			</div>
 			<div class="col-xl-6 col-lg-6 mt-5">
-				<h5 class="project-title font-weight-600">Online školski dnevnik</h5>
+				<a class="project-title h5 font-weight-600 text-dark text-decoration-none" href="projects/e-gradebook">Školski informacioni sistem</a>
 				<p class="text-grey font-weight-300 mt-3">Elektronski dnevnik  predstavlja evidenciju o učenicima, njihovom napretku i ocjenama, ali i dokumentaciju o odsustvu i druge podatke. Ovakav informacioni sistem čini bitne informacije lako dostupnim kako roditeljima i učenicima, tako i nastavnicima i ostalima koji imaju potrebu za time. Ovaj projekat je još u fazi izrade..</p>
 			</div>
 		</div>
+		<div class="row my-5 pt-5">
+			<div class="col-xl-6 col-lg-6">
+				<img src="assets/img/projects/akademski-registar.jpg" class="img-fluid">
+			</div>
+			<div class="col-xl-6 col-lg-6 mt-5">
+				<a class="project-title h5 font-weight-600 text-dark text-decoration-none" href="projects/academic-register">The register of academic institutions</a>
+				<p class="text-grey font-weight-300 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. </p>
+			</div>
+		</div>		
 	</div>
 </section>
 
@@ -249,7 +271,7 @@
 					<textarea class="form-control rounded-0" style="resize: none;" rows="9" id="exampleFormControlTextarea1" placeholder="Poruka" required="" name="messageContent"></textarea>
 				</div>
 				<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6">
-					<button class="btn bg-linear text-uppercase text-white rounded-pill py-2 px-3 font-size-14 font-weight-500 d-flex align-items-center" type="submit" name="sendMessage">Pošalji poruku<span><img src="img/icons/arrow.png" class="img-fluid"></span></button>
+					<button class="btn bg-linear text-uppercase text-white rounded-pill py-2 px-3 font-size-14 font-weight-500 d-flex align-items-center" type="submit" name="sendMessage">Pošalji poruku<span><img src="assets/img/icons/arrow.png" class="img-fluid"></span></button>
 				</div>
 			</div>
 		</form>		
@@ -413,14 +435,18 @@ www.fatasefer.com";
 <!-- [End of Footer] -->
 
 <!-- [Scripts]	-->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/vendor/jquery/jquery-3.4.1.slim.min.js"></script>
+<script src="js/vendor/bootstrap/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="js/vendor/bootstrap/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="js/vendor/jquery/jquery.min.js"></script>
+
+
+
+<!-- [Smooth scrolling] -->
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  $(".navbar a, #back-to-top-btn").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -443,6 +469,8 @@ $(document).ready(function(){
   });
 });
 </script>
+
+<!-- [Scroll to Top Button] -->
 <script type="text/javascript">
 //Get the button
 var mybutton = document.getElementById("back-to-top-btn");

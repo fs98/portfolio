@@ -8,6 +8,7 @@ body {
 
 ::selection{
 	background: rgba(78, 205, 196, 0.5);
+	color: black;
 }
 
 /* Custom style classes */
@@ -61,8 +62,20 @@ body {
 	color: #4267B1;
 }
 
+.text-linkedin{
+	color: #0a66c2;
+}
+
 .text-grey{
 	color: #888888;
+}
+
+.text-shakespeare{
+	color: #52b3d9;
+}
+
+.text-medium-turquoise{
+	color: #4ecdc4;
 }
 
 .bg-grey{
@@ -113,26 +126,41 @@ body {
 	}
 }
 
-/* Services Container */
+/* Services and Projects Container (Since they have the same style) */
 
-#services h1{
+#services h1,
+#aboutProject h1{
 	font-size: 35px;
 }
 
-#services h6{
+#services h6, 
+#aboutProject h6{
 	font-size: 15px;
 }
 
-#services .icon{
+#services .icon, 
+#aboutProject .icon{
 	height: 90px;
 }
 
-#services .service-title{
+#services .service-title,
+#aboutProject .service-title{
 	font-size: 18px;
 }
 
-#services p{
+#services p,
+#aboutProject p{
 	font-size: 14px;
+}
+
+#aboutProject i{
+	background:-moz-linear-gradient(to right,#4ecdc4,#52b3d9);
+    background: -webkit-linear-gradient(to right,#4ecdc4,#52b3d9);
+    background: linear-gradient(to right,#4ecdc4,#52b3d9);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
 }
 
 /* About Me Container */
@@ -185,8 +213,8 @@ body {
 
 #about a:hover{
 	background: white;
-	color: #22313f;
-	border: 1px solid #22313f;
+	color: #52b3d9;
+	border: 1px solid #52b3d9;
 	transition: 1s;
 	-webkit-transition: 1s;
 	-moz-transition: 1s;
@@ -216,6 +244,33 @@ body {
 	-webkit-transform: scale(0.9);
 	-o-transform: scale(0.9);
 	-moz-transform: scale(0.9);
+	transition-duration: 0.7s;
+}
+
+/* Project Screenshots container */
+
+#projectScreenshots h1{
+	font-size: 35px;
+}
+
+#projectScreenshots h6{
+	font-size: 15px;
+}
+
+#projectScreenshots p{
+	font-size: 14px;
+}
+
+#projectScreenshots a img{
+	height: 175px !important;
+	width: 100%
+}
+
+#projectScreenshots a img:hover{
+	transform: scale(0.95);
+	-webkit-transform: scale(0.95);
+	-o-transform: scale(0.95);
+	-moz-transform: scale(0.95);
 	transition-duration: 0.7s;
 }
 

@@ -14,16 +14,14 @@
 </head>
 <body>
 
-<!-- 	<?php 
+<!-- 	<?php
+$servername = "localhost";
+$user = "root";
+$password = "";
+$db_name = "portfolio";
 
-	$servername="localhost";
-	$user="root";
-	$password="";
-	$db_name="portfolio";
-
-				$conn = mysqli_connect($servername, $user, $password, $db_name);
-
-	?> -->			
+$conn = mysqli_connect($servername, $user, $password, $db_name);
+?> -->			
 
 <!-- [Navbar] -->
 
@@ -275,19 +273,20 @@
 				</div>
 			</div>
 		</form>		
-		<?php 
+		<?php if (isset($_POST["sendMessage"])) {
+      $visitorName = $_POST["visitorName"];
+      $visitorEmail = $_POST["visitorEmail"];
+      $messageSubject = $_POST["messageSubject"];
+      $messageContent = $_POST["messageContent"];
 
-		if (isset($_POST['sendMessage'])) {
-			$visitorName=$_POST['visitorName'];
-			$visitorEmail=$_POST['visitorEmail'];
-			$messageSubject=$_POST['messageSubject'];
-			$messageContent=$_POST['messageContent'];
+      $messageSent = mysqli_query(
+          $conn,
+          "INSERT INTO visitormessages (VisitorName,VisitorEmailAddress,MessageSubject,messageContent) values ('$visitorName','$visitorEmail','$messageSubject','$messageContent')"
+      );
 
-			$messageSent=mysqli_query($conn, "INSERT INTO visitormessages (VisitorName,VisitorEmailAddress,MessageSubject,messageContent) values ('$visitorName','$visitorEmail','$messageSubject','$messageContent')");
-            
-            /* Mail to me */
-            $sender_message_subject="New question from $visitorName";
-            $sender_message="You have new question from $visitorName. 
+      /* Mail to me */
+      $sender_message_subject = "New question from $visitorName";
+      $sender_message = "You have new question from $visitorName. 
 
 Details
 
@@ -295,11 +294,11 @@ Email: $visitorEmail
 Subject: $messageSubject
 Message: $messageContent";
 
-            /* $headers1 .= 'From: ' . 'Personal Website' . "\r\n"; */
+      /* $headers1 .= 'From: ' . 'Personal Website' . "\r\n"; */
 
-            /* Mail to sender */
-            
-            $message_to_sender="Zdravo $visitorName,
+      /* Mail to sender */
+
+      $message_to_sender = "Zdravo $visitorName,
             
 Vaša poruka je spremljena, a odgovor ćete dobiti uskoro. Ukoliko odgovor ne stigne u roku od narednih deset dana - provjerite spam folder.
 
@@ -311,12 +310,11 @@ Fata Sefer
 +387 62 808 723
 Travnik, 72270
 www.fatasefer.com";
-            
-            $header_to_sender .='From: ' . 'Fata Sefer' . ' ' . 'info@fatasefer.com' . "\r\n";
 
-			if ($messageSent) {
+      $header_to_sender .=
+          "From: " . "Fata Sefer" . " " . "info@fatasefer.com" . "\r\n";
 
-			?>
+      if ($messageSent) { ?>
 				<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
 					 Vaša poruka je poslana. Uskoro ćete primiti mejl kojim se to potvrđuje.
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -324,22 +322,22 @@ www.fatasefer.com";
 						</button>
 				</div>
 			<?php
-			mail("info@fatasefer.com",$sender_message_subject,$sender_message);
-			mail($visitorEmail,"Vaša poruka je primljena",$message_to_sender,$header_to_sender);
-			}
-			else {
-			?>
+   mail("info@fatasefer.com", $sender_message_subject, $sender_message);
+   mail(
+       $visitorEmail,
+       "Vaša poruka je primljena",
+       $message_to_sender,
+       $header_to_sender
+   );
+   } else { ?>
 				<div class="alert alert-danger fade show font-size-14 font-weight-400 mt-3 text-outer-space rounded-0 border-0" role="alert">
 					 Došlo je do greške. Molim, pokušajte kasnije.
 					 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					   <span aria-hidden="true">&times;</span>
 						</button>
 				</div>
-			<?php
-			}
-		}
-
-		?>
+			<?php }
+  } ?>
 	</div>
 </section>
 
@@ -366,22 +364,23 @@ www.fatasefer.com";
 					  </div>
 					</div>
 				</form>
-				<?php 
+				<?php if (isset($_POST["ContactRequestSubmitted"])) {
+        $visitorEmail = $_POST["VisitorEmail"];
 
-				if (isset($_POST['ContactRequestSubmitted'])) {
-					$visitorEmail=$_POST['VisitorEmail'];
+        $visitorEmailSubmitted = mysqli_query(
+            $conn,
+            "insert into contactmerequest (VisitorEmailAddress) values ('$visitorEmail')"
+        );
 
-					$visitorEmailSubmitted=mysqli_query($conn, "insert into contactmerequest (VisitorEmailAddress) values ('$visitorEmail')");
-					
-					/* Mail to me */
-					
-					$email_request_subject="New email request";
-					$email_request_message="You have new email request from $visitorEmail.";
-					/* $headers2 .= 'From: ' . 'Personal Website' . "\r\n"; */
-					
-					/* Mail to visitor */
-					
-					$email_request_message_to_visitor="Zdravo,
+        /* Mail to me */
+
+        $email_request_subject = "New email request";
+        $email_request_message = "You have new email request from $visitorEmail.";
+        /* $headers2 .= 'From: ' . 'Personal Website' . "\r\n"; */
+
+        /* Mail to visitor */
+
+        $email_request_message_to_visitor = "Zdravo,
 					
 Vaš mejl je primljen i sačuvan. Uskoro ću Vas kontaktirati. Ukoliko u narednih deset dana ne budete kontaktirani, provjerite spam folder.
 
@@ -393,11 +392,11 @@ Fata Sefer
 +387 62 808 723
 Travnik, 72270
 www.fatasefer.com";
-                    
-                    $email_request_header_to_sender .='From: ' . 'Fata Sefer' . ' ' . 'info@fatasefer.com' . "\r\n";
 
-					if ($visitorEmailSubmitted) {
-						?>
+        $email_request_header_to_sender .=
+            "From: " . "Fata Sefer" . " " . "info@fatasefer.com" . "\r\n";
+
+        if ($visitorEmailSubmitted) { ?>
 						<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
 						  Vaša mejl adresa je sačuvana. Uskoro ćete dobiti mejl kojim se to potvrđuje.
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -405,22 +404,26 @@ www.fatasefer.com";
 						  </button>
 						</div>
 						<?php
-						mail('info@fatasefer.com',$email_request_subject,$email_request_message);
-						mail($visitorEmail,"Vaš mejl je sačuvan.",$email_request_message_to_visitor,$email_request_header_to_sender);
-					}
-					else {
-						?>
+      mail(
+          "info@fatasefer.com",
+          $email_request_subject,
+          $email_request_message
+      );
+      mail(
+          $visitorEmail,
+          "Vaš mejl je sačuvan.",
+          $email_request_message_to_visitor,
+          $email_request_header_to_sender
+      );
+      } else { ?>
 						<div class="alert alert-danger fade show font-size-14 font-weight-400 mt-3 text-outer-space rounded-0 border-0" role="alert">
 						  Došlo je do greške. Molim, pokušajte kasnije.
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						    <span aria-hidden="true">&times;</span>
 						  </button>
 						</div>
-						<?php
-					}
-				}				
-
-				?>
+						<?php }
+    } ?>
 			</div>
 			<div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-6  mt-xl-0 mt-lg-0 mt-md-4 mt-sm-4 mt-5 col-sm-6">
 				<h5 class="text-white font-weight-600">Pratite moj rad</h5>

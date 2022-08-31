@@ -18,14 +18,12 @@
 <!-- [Navbar] -->
 
 <?php
+$servername = "localhost";
+$user = "root";
+$password = "";
+$db_name = "portfolio";
 
-	$servername="localhost";
-	$user="root";
-	$password="";
-	$db_name="portfolio";
-
-	$conn = mysqli_connect($servername, $user, $password, $db_name);
-
+$conn = mysqli_connect($servername, $user, $password, $db_name);
 ?>
 
 	<nav class="navbar navbar-expand-lg sticky-top bg-linear">
@@ -143,29 +141,30 @@
 				</div>
 			</div>
 		</form>	
-		<?php 
+		<?php if (isset($_POST["sendMessage"])) {
+      $visitorName = $_POST["visitorName"];
+      $visitorEmail = $_POST["visitorEmail"];
+      $messageSubject = $_POST["messageSubject"];
+      $messageContent = $_POST["messageContent"];
 
-		if (isset($_POST['sendMessage'])) {
-			$visitorName=$_POST['visitorName'];
-			$visitorEmail=$_POST['visitorEmail'];
-			$messageSubject=$_POST['messageSubject'];
-			$messageContent=$_POST['messageContent'];
+      $messageSent = mysqli_query(
+          $conn,
+          "INSERT INTO visitormessages (VisitorName,VisitorEmailAddress,MessageSubject,messageContent) values ('$visitorName','$visitorEmail','$messageSubject','$messageContent')"
+      );
 
-			$messageSent=mysqli_query($conn, "INSERT INTO visitormessages (VisitorName,VisitorEmailAddress,MessageSubject,messageContent) values ('$visitorName','$visitorEmail','$messageSubject','$messageContent')");
-
-            /* Mail to me */
-            $subject_to_me="New question from $visitorName";
-            $message_to_me="You have new question from $visitorName.
+      /* Mail to me */
+      $subject_to_me = "New question from $visitorName";
+      $message_to_me = "You have new question from $visitorName.
             
 Email: $visitorEmail
 Subject: $messageSubject
 Message: $messageContent";
-            
-            /* $headers2 .= 'From: ' . 'Personal Website' . "\r\n"; */
-            
-            /* Mail to sender */
-            
-            $message_to_sender="Hello $visitorName,
+
+      /* $headers2 .= 'From: ' . 'Personal Website' . "\r\n"; */
+
+      /* Mail to sender */
+
+      $message_to_sender = "Hello $visitorName,
             
 Your message is received. I will get to you as soon as possible. If you do not receive my email in next ten days, please check your spam folder.
 
@@ -177,11 +176,11 @@ Fata Sefer
 +387 62 808 723
 Travnik, 72270
 https://fata-sefer.000webhostapp.com/";
-            $header_to_sender = '';
-            $header_to_sender .='From: ' . 'Fata Sefer' . ' ' . 'sefer.fata@gmail.com' . "\r\n";
+      $header_to_sender = "";
+      $header_to_sender .=
+          "From: " . "Fata Sefer" . " " . "sefer.fata@gmail.com" . "\r\n";
 
-			if ($messageSent) {
-			?>
+      if ($messageSent) { ?>
 				<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
 					 Thank you. You will receive a confirmation email soon.
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -189,22 +188,22 @@ https://fata-sefer.000webhostapp.com/";
 						</button>
 				</div>
 			<?php
-			    mail("sefer.fata@gmail.com",$subject_to_me,$message_to_me);
-			    mail($visitorEmail,"Your message is received",$message_to_sender,$header_to_sender);
-			}
-			else {
-			?>
+   mail("sefer.fata@gmail.com", $subject_to_me, $message_to_me);
+   mail(
+       $visitorEmail,
+       "Your message is received",
+       $message_to_sender,
+       $header_to_sender
+   );
+   } else { ?>
 				<div class="alert alert-danger fade show font-size-14 font-weight-400 mt-3 text-outer-space rounded-0 border-0" role="alert">
 					 Error. Please try later.
 					 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					   <span aria-hidden="true">&times;</span>
 						</button>
 				</div>
-			<?php
-			}
-		}
-
-		?>	
+			<?php }
+  } ?>	
 	</div>
 </section>
 
@@ -231,22 +230,23 @@ https://fata-sefer.000webhostapp.com/";
 					  </div>
 					</div>
 				</form>
-				<?php 
+				<?php if (isset($_POST["ContactRequestSubmitted"])) {
+        $visitorEmail = $_POST["VisitorEmail"];
 
-				if (isset($_POST['ContactRequestSubmitted'])) {
-					$visitorEmail=$_POST['VisitorEmail'];
+        $visitorEmailSubmitted = mysqli_query(
+            $conn,
+            "insert into contactmerequest (VisitorEmailAddress) values ('$visitorEmail')"
+        );
 
-					$visitorEmailSubmitted=mysqli_query($conn, "insert into contactmerequest (VisitorEmailAddress) values ('$visitorEmail')");
-					
-					/* Mail to me */
-					$mail_to='sefer.fata@gmail.com';
-					$subject='New Email request';
-					$message="You have new email request from $visitorEmail.";
-					/* $headers1 .= 'From: ' . 'Personal Website' . "\r\n"; */
-					
-					/* Mail to visitor */
-					$subject_visitorMail='Your email is received.';
-					$message_for_visitor="Hello there,
+        /* Mail to me */
+        $mail_to = "sefer.fata@gmail.com";
+        $subject = "New Email request";
+        $message = "You have new email request from $visitorEmail.";
+        /* $headers1 .= 'From: ' . 'Personal Website' . "\r\n"; */
+
+        /* Mail to visitor */
+        $subject_visitorMail = "Your email is received.";
+        $message_for_visitor = "Hello there,
 					
 Your email is received. I will get back to you as soon as possible. If you do not receive my email in next ten days, please check your spam folder.
 
@@ -258,12 +258,11 @@ Fata Sefer
 +387 62 808 723
 Travnik, 72270
 https://fata-sefer.000webhostapp.com/";
-					$headers = '';
-					$headers .= 'From: ' . 'Fata Sefer' . ' ' . 'sefer.fata@gmail.com' . "\r\n";
+        $headers = "";
+        $headers .=
+            "From: " . "Fata Sefer" . " " . "sefer.fata@gmail.com" . "\r\n";
 
-
-					if ($visitorEmailSubmitted) {
-						?>
+        if ($visitorEmailSubmitted) { ?>
 						<div class="alert alert-dismissible fade show font-size-14 font-weight-400 mt-3 bg-linear text-outer-space rounded-0 border-0" role="alert">
 						  Thank you. You will receive a confirmation email soon.
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -271,24 +270,17 @@ https://fata-sefer.000webhostapp.com/";
 						  </button>
 						</div>
 						<?php
-						mail($mail_to,$subject,$message);
-						mail($visitorEmail,$subject_visitorMail,$message_for_visitor,$headers);
-					}
-					else {
-						?>
+      mail($mail_to, $subject, $message);
+      mail($visitorEmail, $subject_visitorMail, $message_for_visitor, $headers);
+      } else { ?>
 						<div class="alert alert-danger fade show font-size-14 font-weight-400 mt-3 text-outer-space rounded-0 border-0" role="alert">
 						  Error. Please try later.
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						    <span aria-hidden="true">&times;</span>
 						  </button>
 						</div>
-						<?php
-					}				
-
-				}
-
-				
-				?>
+						<?php }
+    } ?>
 			</div>
 			<div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-6  mt-xl-0 mt-lg-0 mt-md-4 mt-sm-4 mt-5 col-sm-6">
 				<h5 class="text-white font-weight-600">Follow My Work</h5>
